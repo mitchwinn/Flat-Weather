@@ -12,9 +12,15 @@
 		B8171CAF1C84F0E900C142EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8171CAD1C84F0E900C142EE /* Main.storyboard */; };
 		B8171CB11C84F0E900C142EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8171CB01C84F0E900C142EE /* Assets.xcassets */; };
 		B8171CB41C84F0E900C142EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8171CB21C84F0E900C142EE /* LaunchScreen.storyboard */; };
+		B87C4ED31C84F22600EC74AB /* ForcastIOApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */; };
+		B87C4ED51C84F6FE00EC74AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87C4ED41C84F6FE00EC74AB /* MapKit.framework */; };
+		CDB6D9F29001355004B7568C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411697A8F9B1C08070D70E56 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411697A8F9B1C08070D70E56 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFC59BC8BA89CC3A8145443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6F5835133A665F48426C2FE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8171CA61C84F0E900C142EE /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8171CA91C84F0E900C142EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8171CAB1C84F0E900C142EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		B8171CB01C84F0E900C142EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8171CB31C84F0E900C142EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8171CB51C84F0E900C142EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastIOApi.swift; sourceTree = "<group>"; };
+		B87C4ED41C84F6FE00EC74AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87C4ED51C84F6FE00EC74AB /* MapKit.framework in Frameworks */,
+				CDB6D9F29001355004B7568C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166974A00C4A37920523387C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FFC59BC8BA89CC3A8145443 /* Pods.debug.xcconfig */,
+				6F5835133A665F48426C2FE4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B8171C9D1C84F0E800C142EE = {
 			isa = PBXGroup;
 			children = (
 				B8171CA81C84F0E900C142EE /* Weather */,
 				B8171CA71C84F0E900C142EE /* Products */,
+				166974A00C4A37920523387C /* Pods */,
+				C7C32F9A199A157E5265556F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +81,18 @@
 				B8171CB01C84F0E900C142EE /* Assets.xcassets */,
 				B8171CB21C84F0E900C142EE /* LaunchScreen.storyboard */,
 				B8171CB51C84F0E900C142EE /* Info.plist */,
+				B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		C7C32F9A199A157E5265556F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B87C4ED41C84F6FE00EC74AB /* MapKit.framework */,
+				411697A8F9B1C08070D70E56 /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8171CB81C84F0E900C142EE /* Build configuration list for PBXNativeTarget "Weather" */;
 			buildPhases = (
+				C4E1B4CFEB9B9086D9933D64 /* Check Pods Manifest.lock */,
 				B8171CA21C84F0E800C142EE /* Sources */,
 				B8171CA31C84F0E800C142EE /* Frameworks */,
 				B8171CA41C84F0E800C142EE /* Resources */,
+				2653C5231C693F8AEC61B4E1 /* Embed Pods Frameworks */,
+				830A01B124E2C56C504610BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +130,11 @@
 				TargetAttributes = {
 					B8171CA51C84F0E800C142EE = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,11 +169,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2653C5231C693F8AEC61B4E1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		830A01B124E2C56C504610BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E1B4CFEB9B9086D9933D64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8171CA21C84F0E800C142EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87C4ED31C84F22600EC74AB /* ForcastIOApi.swift in Sources */,
 				B8171CAC1C84F0E900C142EE /* ViewController.swift in Sources */,
 				B8171CAA1C84F0E900C142EE /* AppDelegate.swift in Sources */,
 			);
@@ -247,6 +335,7 @@
 		};
 		B8171CB91C84F0E900C142EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFC59BC8BA89CC3A8145443 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Weather/Info.plist;
@@ -258,6 +347,7 @@
 		};
 		B8171CBA1C84F0E900C142EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F5835133A665F48426C2FE4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Weather/Info.plist;
@@ -286,6 +376,7 @@
 				B8171CBA1C84F0E900C142EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
