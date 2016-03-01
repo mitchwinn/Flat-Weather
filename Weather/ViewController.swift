@@ -18,16 +18,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // Create views
         // Add views to self
-        // Get user current location
+        
         // Setup location manager.
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
-        
-        // Fetch weather from forcastio api using current location
-        // Update views with weather data fetched
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +39,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print("Recieved location \(lastLocation) with accuracy \(accuracy)")
         
         if (accuracy < 100.0) {
-            forcastIOApi.getCurrentLocationWeatherSummary(lastLocation!)
+            forcastIOApi.getCurrentLocationWeatherSummary(lastLocation!, completionBlock: {
+            (let forecastSummary) in
+                // Update UI with forecastSummary data.
+            })
             manager.stopUpdatingLocation()
         }
     }

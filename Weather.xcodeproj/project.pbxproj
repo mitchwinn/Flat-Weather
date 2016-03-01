@@ -14,6 +14,7 @@
 		B8171CB41C84F0E900C142EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8171CB21C84F0E900C142EE /* LaunchScreen.storyboard */; };
 		B87C4ED31C84F22600EC74AB /* ForcastIOApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */; };
 		B87C4ED51C84F6FE00EC74AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87C4ED41C84F6FE00EC74AB /* MapKit.framework */; };
+		B8BE4B151C861BA100C60A92 /* ForecastSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE4B141C861BA100C60A92 /* ForecastSummary.swift */; };
 		CDB6D9F29001355004B7568C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411697A8F9B1C08070D70E56 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		B8171CB51C84F0E900C142EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastIOApi.swift; sourceTree = "<group>"; };
 		B87C4ED41C84F6FE00EC74AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B8BE4B141C861BA100C60A92 /* ForecastSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				B8171CB21C84F0E900C142EE /* LaunchScreen.storyboard */,
 				B8171CB51C84F0E900C142EE /* Info.plist */,
 				B87C4ED21C84F22600EC74AB /* ForcastIOApi.swift */,
+				B8BE4B141C861BA100C60A92 /* ForecastSummary.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				B87C4ED31C84F22600EC74AB /* ForcastIOApi.swift in Sources */,
 				B8171CAC1C84F0E900C142EE /* ViewController.swift in Sources */,
 				B8171CAA1C84F0E900C142EE /* AppDelegate.swift in Sources */,
+				B8BE4B151C861BA100C60A92 /* ForecastSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

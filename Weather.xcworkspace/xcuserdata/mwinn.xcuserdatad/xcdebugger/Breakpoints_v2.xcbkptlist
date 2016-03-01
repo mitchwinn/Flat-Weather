@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/ForcastIOApi.swift"
-            timestampString = "478476239.775103"
+            filePath = "Weather/ViewController.swift"
+            timestampString = "478553899.290597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "getCurrentLocationWeatherSummary(_:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/ViewController.swift"
-            timestampString = "478475800.954029"
+            filePath = "Weather/ForcastIOApi.swift"
+            timestampString = "478553882.230949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getCurrentLocationWeatherSummary(_:completionBlock:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/ForecastSummary.swift"
+            timestampString = "478553890.536971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "init(currentTemperature:weatherIconName:nextHourTemperature:nextHourWeatherIconName:degreeType:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

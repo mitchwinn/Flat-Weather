@@ -14,12 +14,18 @@ struct ForcastIOApi {
     static let sharedInstance = ForcastIOApi()
     private init() {}
     
-    func getCurrentLocationWeatherSummary(location: CLLocation) {
+    func getCurrentLocationWeatherSummary(location: CLLocation, completionBlock:((ForecastSummary)->())?) {
         ForecastIOClient.sharedInstance.forecast(location.coordinate.latitude, longitude: location.coordinate.longitude) { (forecast, forecastAPICalls) -> Void in
-            // clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, partly-cloudy-night, hail, thunderstorm, tornado
-            print(forecast.currently?.summary)
-            print(forecast.currently?.temperature)
-            print(forecast.currently?.icon)
+            
+            // Create new object for the forecast summary
+            let forecastSummary = ForecastSummary(currentTemperature: (forecast.currently?.temperature)!,
+                                                  weatherIconName: (forecast.currently?.icon)!,
+                                                  nextHourTemperature: (forecast.hourly?.data![1].temperature)!,
+                                                  nextHourWeatherIconName: (forecast.hourly?.data![1].icon)!)
+            
+            if (completionBlock != nil) {
+                completionBlock!(forecastSummary)
+            }
         }
     }
 }
