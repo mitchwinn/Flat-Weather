@@ -10,32 +10,32 @@ import Foundation
 
 // clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, partly-cloudy-night, hail, thunderstorm, tornado
 enum WeatherIcon: String {
-    case ClearDay = "ClearDay.png"
-    case ClearNight = "ClearNight.png"
-    case Rain = "Rain.png"
-    case Snow = "Snow.png"
-    case Sleet = "Sleet.png"
-    case Wind = "Wind.png"
-    case Fog = "Fog.png"
-    case Cloudy = "Cloudy.png"
-    case PartlyCloudyDay = "PartlyCloudyDay.png"
-    case PartlyCloudyNight = "PartlyCloudyNight.png"
-    case Hail = "Hail.png"
-    case Thunderstorm = "Thunderstorm.png"
-    case Tornado = "Tornado.png"
-    case ClearDaySmall = "ClearDaySmall.png"
-    case ClearNightSmall = "ClearNightSmall.png"
-    case RainSmall = "RainSmall.png"
-    case SnowSmall = "SnowSmall.png"
-    case SleetSmall = "SleetSmall.png"
-    case WindSmall = "WindSmall.png"
-    case FogSmall = "FogSmall.png"
-    case CloudySmall = "CloudySmall.png"
-    case PartlyCloudyDaySmall = "PartlyCloudyDaySmall.png"
-    case PartlyCloudyNightSmall = "PartlyCloudyNightSmall.png"
-    case HailSmall = "HailSmall.png"
-    case ThunderstormSmall = "ThunderstormSmall.png"
-    case TornadoSmall = "TornadoSmall.png"
+    case ClearDay = "ClearDay"
+    case ClearNight = "ClearNight"
+    case Rain = "Rain"
+    case Snow = "Snow"
+    case Sleet = "Sleet"
+    case Wind = "Wind"
+    case Fog = "Fog"
+    case Cloudy = "Cloudy"
+    case PartlyCloudyDay = "PartlyCloudyDay"
+    case PartlyCloudyNight = "PartlyCloudyNight"
+    case Hail = "Hail"
+    case Thunderstorm = "Thunderstorm"
+    case Tornado = "Tornado"
+    case ClearDaySmall = "ClearDaySmall"
+    case ClearNightSmall = "ClearNightSmall"
+    case RainSmall = "RainSmall"
+    case SnowSmall = "SnowSmall"
+    case SleetSmall = "SleetSmall"
+    case WindSmall = "WindSmall"
+    case FogSmall = "FogSmall"
+    case CloudySmall = "CloudySmall"
+    case PartlyCloudyDaySmall = "PartlyCloudyDaySmall"
+    case PartlyCloudyNightSmall = "PartlyCloudyNightSmall"
+    case HailSmall = "HailSmall"
+    case ThunderstormSmall = "ThunderstormSmall"
+    case TornadoSmall = "TornadoSmall"
 }
 
 struct ForecastSummary {
@@ -44,13 +44,15 @@ struct ForecastSummary {
     var weatherIconName: String!
     var nextHourTemperature: Double!
     var nextHourWeatherIconName: String!
+    var forecastSummary: String!
     
-    init(currentTemperature: Double, weatherIconName: String, nextHourTemperature: Double, nextHourWeatherIconName: String, degreeType: String = "F") {
+    init(currentTemperature: Double, weatherIconName: String, nextHourTemperature: Double, nextHourWeatherIconName: String, summary: String, degreeType: String = "F") {
         self.currentTemperature = currentTemperature
         self.degreeType = degreeType
         self.weatherIconName = self.findWeatherIcon(weatherIconName)
         self.nextHourTemperature = nextHourTemperature
         self.nextHourWeatherIconName = self.findWeatherIcon(nextHourWeatherIconName)
+        self.forecastSummary = summary
     }
     
     func findWeatherIcon(name: String) -> String {

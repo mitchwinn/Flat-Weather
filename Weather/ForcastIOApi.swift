@@ -21,8 +21,8 @@ struct ForcastIOApi {
             let forecastSummary = ForecastSummary(currentTemperature: (forecast.currently?.temperature)!,
                                                   weatherIconName: (forecast.currently?.icon)!,
                                                   nextHourTemperature: (forecast.hourly?.data![1].temperature)!,
-                                                  nextHourWeatherIconName: (forecast.hourly?.data![1].icon)!)
-            
+                                                  nextHourWeatherIconName: (forecast.hourly?.data![1].icon)!,
+                                                  summary: (forecast.currently?.summary)!)      
             if (completionBlock != nil) {
                 completionBlock!(forecastSummary)
             }

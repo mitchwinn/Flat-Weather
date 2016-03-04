@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         ForecastIOClient.apiKey = "7899dd73158230912c84e4a1ec29a24c"
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         return true
     }
