@@ -74,6 +74,7 @@
                         <outlet property="currentTempLabel" destination="VaB-XX-vw4" id="ueq-n9-4Pz"/>
                         <outlet property="nextHourTempLabel" destination="U97-cn-uAO" id="p4x-X3-boZ"/>
                         <outlet property="nextHourWeatherIcon" destination="seH-PL-2iC" id="eFB-7P-27k"/>
+                        <outlet property="refreshButton" destination="U2L-7Q-YlZ" id="M4N-2J-zTg"/>
                         <outlet property="weatherIconImageView" destination="Pun-Us-Lwx" id="vSy-cS-WFx"/>
                     </connections>
                 </viewController>
