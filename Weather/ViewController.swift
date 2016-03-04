@@ -28,7 +28,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // Update views.
         cardView.layer.cornerRadius = 5.0
-        updateWeatherView(75, currentWeatherIcon: "Rain", currentForecastSummary: "Light rain for now :(", nextHourTemp: 75, nextHourWeatherIcon: "CloudySmall")
+        self.startSpinningAnnimation()
+        updateWeatherView(75, currentWeatherIcon: "Rain", currentForecastSummary: "Loading...", nextHourTemp: 75, nextHourWeatherIcon: "CloudySmall")
         
         // Setup location manager.
         self.locationManager = CLLocationManager()
